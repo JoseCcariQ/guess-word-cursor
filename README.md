@@ -21,15 +21,6 @@ Un juego interactivo de adivinar palabras en español con un sistema de pistas i
 - 🔌 **100% offline** - no requiere conexión a internet
 - 🤖 **Preparado para IA real** - estructura lista para integrar OpenAI
 
-## 📸 Capturas de Pantalla
-
-<!-- Agrega aquí capturas de pantalla de tu aplicación -->
-
-| Pantalla de Inicio | Juego en Progreso | Victoria |
-|:------------------:|:-----------------:|:--------:|
-| ![Inicio](screenshots/inicio.png) | ![Juego](screenshots/juego.png) | ![Victoria](screenshots/victoria.png) |
-
-> 💡 Las capturas de pantalla son placeholders. Reemplázalas con imágenes reales de tu aplicación.
 
 ## 🚀 Comenzar
 
