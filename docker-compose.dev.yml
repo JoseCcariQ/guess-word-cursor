@@ -1,0 +1,20 @@
+version: '3.8'
+
+# Docker Compose para desarrollo con hot-reload
+services:
+  adivina-palabra-dev:
+    image: node:20-alpine
+    container_name: adivina-la-palabra-ia-dev
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      # Descomenta si quieres usar OpenAI
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command: sh -c "npm install && npm run dev"
+    restart: unless-stopped
+

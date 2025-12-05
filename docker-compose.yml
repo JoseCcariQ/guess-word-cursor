@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  adivina-palabra:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: adivina-la-palabra-ia
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Descomenta la siguiente línea si quieres usar OpenAI en el futuro
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# Para desarrollo con hot-reload, usar:
+# docker-compose -f docker-compose.dev.yml up
+
